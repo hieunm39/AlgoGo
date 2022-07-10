@@ -2,7 +2,6 @@ package main
 
 import "fmt"
 
-
 type Node struct {
 	data int
 	next *Node
@@ -30,12 +29,20 @@ func (l *LinkedList) insert(data int) {
 
 	if l.head == nil {
 		l.head = temp1
-	} else {
-		
+	} else {	
 		temp2 := l.head
 		l.head = temp1
 		temp1.next = temp2
-
 	}
 	l.length++
+}
+
+func (l *LinkedList) append(data int) {
+	temp1 := &Node{data, nil}
+	
+	if l.head == nil {
+		l.head = temp1
+	} else {
+	
+	}
 }
